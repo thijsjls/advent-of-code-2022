@@ -1,4 +1,8 @@
 # Day 5
+from pathlib import Path
+
+input = Path(__file__).parent.parent.resolve() / "inputs/input5.txt"
+
 def parse(input: str) -> (list, list):
     crates, _ = input.split('\n\n')
     stacks = [[char for char in reversed(x) if char.isupper()] for *x, y in zip(*crates.split('\n')) if y.isdigit()]
@@ -22,7 +26,7 @@ def part_two(input: str) -> list:
         del stacks[mov[1]][-num_crates:]
     return stacks
 
-with open('inputs/input5.txt') as f:
+with open(input) as f:
     input = f.read()
     print(f"Part One: {''.join([s[-1] for s in part_one(input)])}")
     print(f"Part Two: {''.join([s[-1] for s in part_two(input)])}")

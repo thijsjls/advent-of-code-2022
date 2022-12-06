@@ -1,4 +1,8 @@
 # Day 2
+from pathlib import Path
+
+input = Path(__file__).parent.parent.resolve() / "inputs/input2.txt"
+
 round_to_score_one = {
     'A X': 4, 'A Y': 8, 'A Z': 3,
     'B X': 1, 'B Y': 5, 'B Z': 9,
@@ -9,7 +13,7 @@ round_to_score_two = {
     'B X': 1, 'B Y': 5, 'B Z': 9,
     'C X': 2, 'C Y': 6, 'C Z': 7
 }
-with open('inputs/input2.txt') as f:
+with open(input) as f:
     rounds = f.read().split('\n')
     print(f"Part One: {sum([round_to_score_one[ro] for ro in rounds])}")
     print(f"Part Two: {sum([round_to_score_two[ro] for ro in rounds])}")

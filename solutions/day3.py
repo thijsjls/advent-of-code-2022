@@ -1,5 +1,9 @@
 # Day 3
-with open('inputs/input3.txt') as f:
+from pathlib import Path
+
+input = Path(__file__).parent.parent.resolve() / "inputs/input3.txt"
+
+with open(input) as f:
     rucksacks = f.read().split('\n')
     doubles = [list(set(r[:len(r)//2]).intersection(r[len(r)//2:])) for r in rucksacks]
     badges = [list(set(rucksacks[i-2]) & set(rucksacks[i-1]) & set(rucksacks[i])) for i, r in enumerate(rucksacks) if i%3==2]

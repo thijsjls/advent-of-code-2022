@@ -1,5 +1,9 @@
 # Day 4
-with open('inputs/input4.txt') as f:
+from pathlib import Path
+
+input = Path(__file__).parent.parent.resolve() / "inputs/input4.txt"
+
+with open(input) as f:
     overlap = []
     for line in f.read().split('\n'):
         elf1 = list(range(int(line.split(',')[0].split('-')[0]), int(line.split(',')[0].split('-')[1])+1))
