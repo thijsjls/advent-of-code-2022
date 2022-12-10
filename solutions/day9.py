@@ -5,7 +5,6 @@ import numpy as np
 
 
 def step(x: int) -> int:
-    # if -1 <= x <= 1: return 0
     if x == 0: return 0
     s = 1-(x<0)
     if s == 0: s = -1
