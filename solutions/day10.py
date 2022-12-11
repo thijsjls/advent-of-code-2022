@@ -62,7 +62,7 @@ def part_two(program: list) -> str:
     return "See above"
 
 
-_input = Path(__file__).parent.parent.resolve() / 'inputs/input10.txt'
+_input = Path(__file__).parent.parent.resolve() / 'inputs/I WIN.txt'
 
 with open(_input) as f:
     program = f.readlines()
