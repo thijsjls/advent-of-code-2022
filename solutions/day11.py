@@ -56,7 +56,7 @@ def get_worry_mod(monkeys):
 
 def part_two(monkeys, verbose=False):
     worry_mod = get_worry_mod(monkeys)
-    for round in range(10000):
+    for round in range(10**4):
         for i, monkey in enumerate(monkeys):
             for old in monkey['items']:
                 monkey['num_inspected'] += 1
