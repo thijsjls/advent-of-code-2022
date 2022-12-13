@@ -43,15 +43,11 @@ def part_one(monkeys, verbose=False):
     return sorted(result)[-1]*sorted(result)[-2]
 
 
-
 def get_worry_mod(monkeys):
     all_mods = list(m['test'] for m in monkeys)
-    max_mod = max(all_mods)
-    worry_mod = max_mod
-    while True:
-        if all(worry_mod % m == 0 for m in all_mods):
-            break
-        worry_mod += max_mod
+    worry_mod = 1
+    for m in all_mods:
+        worry_mod *= m
     return worry_mod
 
 def part_two(monkeys, verbose=False):

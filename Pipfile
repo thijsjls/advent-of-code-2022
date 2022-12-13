@@ -5,8 +5,7 @@ name = "pypi"
 
 [packages]
 pathlib = "~=1.0.1"
-re = ""
-numpy = "~"
+numpy = "~=1.23.5"
 
 [dev-packages]
 
